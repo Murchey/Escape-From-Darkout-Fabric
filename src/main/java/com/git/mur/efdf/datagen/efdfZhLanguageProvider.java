@@ -18,5 +18,6 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(HIGH_TOUGHNESS_STEEL_BLOCK,"高韧钢铁块");
         translationBuilder.add(commonItems.STEEL_INGOT,"钢锭");
         translationBuilder.add(commonItems.HIGH_TOUGHNESS_STEEL,"高韧钢");
+        translationBuilder.add(commonItems.TOOL_HAMMER,"工具锤");
     }
 }

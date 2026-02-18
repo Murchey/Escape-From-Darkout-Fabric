@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "efdf:steel_ingot"
+    },
+    "B": {
+      "item": "efdf:tool_hammer"
+    }
+  },
+  "pattern": [
+    "AB "
+  ],
+  "result": {
+    "item": "efdf:high_toughness_steel"
+  },
+  "show_notification": true
+}

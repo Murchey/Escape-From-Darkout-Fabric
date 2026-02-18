@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_high_toughness_steel_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efdf:high_toughness_steel_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "efdf:high_toughness_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_high_toughness_steel_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "efdf:high_toughness_from_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

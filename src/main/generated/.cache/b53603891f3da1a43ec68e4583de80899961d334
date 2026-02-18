@@ -1,7 +1,8 @@
-// 1.20.1	2026-02-18T21:23:59.890745	efdf/Model Definitions
+// 1.20.1	2026-02-18T22:33:30.6076363	efdf/Model Definitions
 0da623f16d02efe73a4296438524817058fc27c5 assets\efdf\models\item\steel_block.json
 9312948a716484103b9cb7c0b1d72c353aa31bac assets\efdf\models\block\high_toughness_steel_block.json
 1a56b678b482fc10cb93224d28f52cec9cab5b90 assets\efdf\blockstates\high_toughness_steel_block.json
+b2b59a0f8649993a7c3f1cde1b959b1d8434ab11 assets\efdf\models\item\tool_hammer.json
 40a8c489eb9d65a4e82b76138c11520d5db03746 assets\efdf\models\item\steel_ingot.json
 7dcc96cb71c21fe243ddea590a0e0b01b8ade90d assets\efdf\blockstates\steel_block.json
 e57cd0b2b65e53c74228f592c1dc8b0a6591c893 assets\efdf\models\item\high_toughness_steel_block.json

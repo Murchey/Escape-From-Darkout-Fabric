@@ -23,5 +23,6 @@ public class efdfModelsProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(commonItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(commonItems.HIGH_TOUGHNESS_STEEL, Models.GENERATED);
+        itemModelGenerator.register(commonItems.TOOL_HAMMER, Models.GENERATED);
     }
 }
