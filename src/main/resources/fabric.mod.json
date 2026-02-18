@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "efdf",
+  "version": "${version}",
+  "name": "efdf",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/efdf/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.git.mur.efdf.client.EfdfDataGenerator"
+    ],
+    "client": [
+      "com.git.mur.efdf.client.EfdfClient"
+    ],
+    "main": [
+      "com.git.mur.efdf.Efdf"
+    ]
+  },
+  "mixins": [
+    "efdf.mixins.json",
+    {
+      "config": "efdf.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
