@@ -1,5 +1,6 @@
 package com.git.mur.efdf.itemGroups;
 
+import com.git.mur.efdf.efdfItems.commonItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
@@ -17,6 +18,8 @@ public class commonItemGroup {
                     .entries(((displayContext, entries) ->{
                         entries.add(commonBlocks.STEEL_BLOCK);
                         entries.add(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
+                        entries.add(commonItems.STEEL_INGOT);
+                        entries.add(commonItems.HIGH_TOUGHNESS_STEEL);
                     }))
                     .build();
     public static void initItemGroup(){

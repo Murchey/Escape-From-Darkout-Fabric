@@ -1,5 +1,6 @@
 package com.git.mur.efdf;
 
+import com.git.mur.efdf.efdfItems.commonItems;
 import net.fabricmc.api.ModInitializer;
 import com.git.mur.efdf.itemGroups.commonItemGroup;
 import static com.git.mur.efdf.efdfBlocks.commonBlocks.initBlocks;
@@ -10,5 +11,6 @@ public class Efdf implements ModInitializer {
     public void onInitialize() {
         initBlocks();
         commonItemGroup.initItemGroup();
+        commonItems.initItems();
     }
 }

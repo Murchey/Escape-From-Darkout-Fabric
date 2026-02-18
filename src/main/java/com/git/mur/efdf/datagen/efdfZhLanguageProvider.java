@@ -1,5 +1,6 @@
 package com.git.mur.efdf.datagen;
 
+import com.git.mur.efdf.efdfItems.commonItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -15,5 +16,7 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(STEEL_BLOCK,"钢铁块");
         translationBuilder.add(HIGH_TOUGHNESS_STEEL_BLOCK,"高韧钢铁块");
+        translationBuilder.add(commonItems.STEEL_INGOT,"钢锭");
+        translationBuilder.add(commonItems.HIGH_TOUGHNESS_STEEL,"高韧钢");
     }
 }
