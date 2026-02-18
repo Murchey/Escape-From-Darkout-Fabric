@@ -11,7 +11,7 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "com.git.mur.efdf.client.EfdfDataGenerator"
+      "com.git.mur.efdf.efdfDataGenerator"
     ],
     "client": [
       "com.git.mur.efdf.client.EfdfClient"

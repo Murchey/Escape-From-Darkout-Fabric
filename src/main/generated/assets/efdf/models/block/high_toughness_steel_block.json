@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "efdf:block/high_toughness_steel_block"
+  }
+}

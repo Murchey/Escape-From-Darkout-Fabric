@@ -1,0 +1,27 @@
+package com.git.mur.efdf.itemGroups;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import com.git.mur.efdf.efdfBlocks.commonBlocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class commonItemGroup {
+    public static final ItemGroup EFDF_ITEM_GROUP =
+            FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(commonBlocks.STEEL_BLOCK))
+                    .displayName(Text.translatable("efdf.itemgroup"))
+                    .entries(((displayContext, entries) ->{
+                        entries.add(commonBlocks.STEEL_BLOCK);
+                        entries.add(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
+                    }))
+                    .build();
+    public static void initItemGroup(){
+        Registry.register(Registries.ITEM_GROUP,
+                new Identifier("efdf","efdf_group"),
+                EFDF_ITEM_GROUP);
+    }
+}

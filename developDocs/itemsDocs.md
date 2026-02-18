@@ -1,0 +1,14 @@
+# 物品开发文档
+
+---
+### 钢锭 (steel_ingot)
+
+注册类型：item
+
+熔炉/高炉：烤制1 iron_ingot -> 1 steel_ingot
+
+### 高韧钢锭 (high_toughness_steel)
+
+注册类型：item
+
+合成台：1 iron_ingot + 1 hammer -> 1 high_toughness_steel
