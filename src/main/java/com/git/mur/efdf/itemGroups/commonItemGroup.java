@@ -1,5 +1,6 @@
 package com.git.mur.efdf.itemGroups;
 
+import com.git.mur.efdf.efdfBlocks.efdfFuel;
 import com.git.mur.efdf.efdfItems.commonItems;
 import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -25,6 +26,7 @@ public class commonItemGroup {
                         entries.add(commonItems.THIN_STEEL_SHEET);
                         entries.add(efdfFood.TAURINE_DRINK_ITEM);
                         entries.add(efdfFood.TAURINE_CRYSTALS_ITEM);
+                        entries.add(efdfFuel.HIGH_ENERGY_FUEL);
                     }))
                     .build();
     public static void initItemGroup(){

@@ -1,5 +1,6 @@
 package com.git.mur.efdf.efdfItems;
 
+import com.git.mur.efdf.Efdf;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
@@ -21,9 +22,9 @@ public class efdfFood {
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20*200,0),0.75f)
             .build();
     public static final Item TAURINE_CRYSTALS_ITEM = new Item(new Item.Settings().food(TAURINE_CRYSTALS).maxCount(64));
-    public static void initFood(){
-        Registry.register(Registries.ITEM, Identifier.of("efdf","taurine_drink"),TAURINE_DRINK_ITEM);
-        Registry.register(Registries.ITEM, Identifier.of("efdf","taurine_crystals"),TAURINE_CRYSTALS_ITEM);
+    public static void foodInit(){
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
     }
 
 }

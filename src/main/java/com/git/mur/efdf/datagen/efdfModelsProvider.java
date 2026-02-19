@@ -1,6 +1,7 @@
 package com.git.mur.efdf.datagen;
 
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
+import com.git.mur.efdf.efdfBlocks.efdfFuel;
 import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -18,6 +19,7 @@ public class efdfModelsProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(commonBlocks.STEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
+        blockStateModelGenerator.registerSimpleState(efdfFuel.HIGH_ENERGY_FUEL);//只创建简单的方块状态
     }
 
     @Override

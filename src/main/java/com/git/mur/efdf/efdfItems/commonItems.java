@@ -1,6 +1,7 @@
 package com.git.mur.efdf.efdfItems;
 
 
+import com.git.mur.efdf.Efdf;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -15,10 +16,12 @@ public class commonItems {
     public static final Item THIN_STEEL_SHEET = new Item(new FabricItemSettings());
     public static final Item STEEL_BOTTLE = new Item(new FabricItemSettings());
     public static void initItems(){
-        Registry.register(Registries.ITEM, Identifier.of("efdf","high_toughness_steel"),HIGH_TOUGHNESS_STEEL);
-        Registry.register(Registries.ITEM, Identifier.of("efdf","steel_ingot"),STEEL_INGOT);
-        Registry.register(Registries.ITEM, Identifier.of("efdf","tool_hammer"),TOOL_HAMMER);
-        Registry.register(Registries.ITEM, Identifier.of("efdf","thin_steel_sheet"),THIN_STEEL_SHEET);
-        Registry.register(Registries.ITEM, Identifier.of("efdf","steel_bottle"),STEEL_BOTTLE);
+        efdfFood.foodInit();
+
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"high_toughness_steel"),HIGH_TOUGHNESS_STEEL);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"steel_ingot"),STEEL_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"tool_hammer"),TOOL_HAMMER);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"thin_steel_sheet"),THIN_STEEL_SHEET);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"steel_bottle"),STEEL_BOTTLE);
     }
 }
