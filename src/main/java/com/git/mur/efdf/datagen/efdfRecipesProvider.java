@@ -2,15 +2,16 @@ package com.git.mur.efdf.datagen;
 
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
 import com.git.mur.efdf.efdfItems.commonItems;
+import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.book.CookingRecipeCategory;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -91,7 +92,39 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
            list.add(Items.IRON_INGOT);
         });
         RecipeProvider.offerSmelting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,300,"efdf");
-        RecipeProvider.offerBlasting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,250,"efdf");
+        RecipeProvider.offerBlasting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.40f,250,"efdf");
+        // 1熟牛肉 -> 2牛磺酸结晶
+        final List<ItemConvertible> STEAK_TO_TAURINE_CRYSTALS = Util.make(Lists.newArrayList(),list->{
+            list.add(Items.COOKED_BEEF);
+        });
+        CookingRecipeJsonBuilder.createSmoking(
+                Ingredient.ofItems(Items.COOKED_BEEF),
+                RecipeCategory.MISC,
+                efdfFood.TAURINE_CRYSTALS_ITEM,
+                0.35f,
+                100).criterion(
+                    FabricRecipeProvider.hasItem(Items.COOKED_BEEF),
+                    FabricRecipeProvider.conditionsFromItem(Items.COOKED_BEEF)
+                ).offerTo(consumer,new Identifier("efdf","taurine_crystals_from_smoking"));
+        CookingRecipeJsonBuilder.createSmelting(
+                Ingredient.ofItems(Items.COOKED_BEEF),
+                RecipeCategory.MISC,
+                efdfFood.TAURINE_CRYSTALS_ITEM,
+                0.35f,
+                200).criterion(
+                FabricRecipeProvider.hasItem(Items.COOKED_BEEF),
+                FabricRecipeProvider.conditionsFromItem(Items.COOKED_BEEF)
+        ).offerTo(consumer,new Identifier("efdf","taurine_crystals_from_smelting"));
+        // 1牛磺酸结晶 + 3薄钢板 -> 2牛磺酸饮料
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,efdfFood.TAURINE_DRINK_ITEM,2)
+                        .pattern("BAB")
+                        .pattern(" B ")
+                        .input('A',efdfFood.TAURINE_CRYSTALS_ITEM)
+                        .input('B',commonItems.STEEL_INGOT)
+                        .criterion(
+                                FabricRecipeProvider.hasItem(Items.COOKED_BEEF),
+                                FabricRecipeProvider.conditionsFromItem(Items.COOKED_BEEF)
+                        ).offerTo(consumer);
         // 1钢锭 -> 6薄钢板
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.THIN_STEEL_SHEET,6)
                 .input(commonItems.STEEL_INGOT,1)

@@ -1,12 +1,13 @@
-// 1.20.1	2026-02-19T09:53:33.5852705	efdf/Model Definitions
+// 1.20.1	2026-02-19T11:09:20.4362725	efdf/Model Definitions
 0da623f16d02efe73a4296438524817058fc27c5 assets\efdf\models\item\steel_block.json
-b8dafb98d0ed7f9be56f492a68ad6a4d0a849930 assets\efdf\models\item\thin_steel_sheet.json
-9312948a716484103b9cb7c0b1d72c353aa31bac assets\efdf\models\block\high_toughness_steel_block.json
 1a56b678b482fc10cb93224d28f52cec9cab5b90 assets\efdf\blockstates\high_toughness_steel_block.json
-b2b59a0f8649993a7c3f1cde1b959b1d8434ab11 assets\efdf\models\item\tool_hammer.json
 40a8c489eb9d65a4e82b76138c11520d5db03746 assets\efdf\models\item\steel_ingot.json
 7dcc96cb71c21fe243ddea590a0e0b01b8ade90d assets\efdf\blockstates\steel_block.json
-e57cd0b2b65e53c74228f592c1dc8b0a6591c893 assets\efdf\models\item\high_toughness_steel_block.json
-3d2d60bb1b1e8e3cbac8daf737f293021804f0e2 assets\efdf\models\item\high_toughness_steel.json
 d02eb7a8900f875d78c648b6afdb36de49b41055 assets\efdf\models\item\taurine_drink.json
 45826397b1cf588bf7edfa000f952fbfb373a096 assets\efdf\models\block\steel_block.json
+f21dd40b205f1ccbee05e20e9a94429e5baa9e40 assets\efdf\models\item\taurine_crystals.json
+b8dafb98d0ed7f9be56f492a68ad6a4d0a849930 assets\efdf\models\item\thin_steel_sheet.json
+9312948a716484103b9cb7c0b1d72c353aa31bac assets\efdf\models\block\high_toughness_steel_block.json
+b2b59a0f8649993a7c3f1cde1b959b1d8434ab11 assets\efdf\models\item\tool_hammer.json
+e57cd0b2b65e53c74228f592c1dc8b0a6591c893 assets\efdf\models\item\high_toughness_steel_block.json
+3d2d60bb1b1e8e3cbac8daf737f293021804f0e2 assets\efdf\models\item\high_toughness_steel.json

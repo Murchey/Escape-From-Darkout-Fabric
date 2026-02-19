@@ -22,5 +22,6 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(commonItems.TOOL_HAMMER,"工具锤");
         translationBuilder.add(efdfFood.TAURINE_DRINK_ITEM,"牛磺酸饮料");
         translationBuilder.add(commonItems.THIN_STEEL_SHEET,"薄钢板");
+        translationBuilder.add(efdfFood.TAURINE_CRYSTALS_ITEM,"牛磺酸结晶");
     }
 }

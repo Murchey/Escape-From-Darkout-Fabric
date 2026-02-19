@@ -22,6 +22,7 @@ public class commonItemGroup {
                         entries.add(commonItems.STEEL_INGOT);
                         entries.add(commonItems.HIGH_TOUGHNESS_STEEL);
                         entries.add(efdfFood.TAURINE_DRINK_ITEM);
+                        entries.add(efdfFood.TAURINE_CRYSTALS_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){
