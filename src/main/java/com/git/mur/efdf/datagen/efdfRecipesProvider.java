@@ -6,12 +6,9 @@ import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.item.FoodComponents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.book.CookingRecipeCategory;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
@@ -36,7 +33,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 .criterion(
                         FabricRecipeProvider.hasItem(commonItems.STEEL_INGOT),
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_INGOT)
-                ).offerTo(consumer);
+                ).offerTo(consumer,new Identifier("efdf","steel_block_from_steel_ingot"));
         // 1钢块 -> 9钢锭
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.STEEL_INGOT,9)
                 .input(commonBlocks.STEEL_BLOCK)
@@ -47,8 +44,8 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 .criterion(
                         FabricRecipeProvider.hasItem(commonBlocks.STEEL_BLOCK),
                         FabricRecipeProvider.conditionsFromItem(commonBlocks.STEEL_BLOCK)
-                ).offerTo(consumer);
-// 9高韧钢 -> 1高韧钢块（有序合成）
+                ).offerTo(consumer,new Identifier("efdf","steel_ingot_from_block"));
+        // 9高韧钢 -> 1高韧钢块（有序合成）
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK)
                 .pattern("XXX")
                 .pattern("XXX")
@@ -60,7 +57,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 )
                 .offerTo(consumer,new Identifier("efdf","high_toughness_block_from_ingot"));
 
-// 1高韧钢块 -> 9高韧钢（无序合成）
+        // 1高韧钢块 -> 9高韧钢（无序合成）
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.HIGH_TOUGHNESS_STEEL, 9)
                 .input(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK)
                 .criterion(
@@ -77,7 +74,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 .criterion(
                         FabricRecipeProvider.hasItem(commonItems.STEEL_INGOT),
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_INGOT)
-                ).offerTo(consumer);
+                ).offerTo(consumer,new Identifier("efdf","tool_hammer_from_make"));
         // 1工具锤+1钢锭 -> 1高韧铁锭
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.HIGH_TOUGHNESS_STEEL,1)
                 .pattern("AB ")
@@ -120,11 +117,11 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         .pattern("BAB")
                         .pattern(" B ")
                         .input('A',efdfFood.TAURINE_CRYSTALS_ITEM)
-                        .input('B',commonItems.STEEL_INGOT)
+                        .input('B',commonItems.THIN_STEEL_SHEET)
                         .criterion(
                                 FabricRecipeProvider.hasItem(Items.COOKED_BEEF),
                                 FabricRecipeProvider.conditionsFromItem(Items.COOKED_BEEF)
-                        ).offerTo(consumer);
+                        ).offerTo(consumer,new Identifier("efdf","taurine_drink_from_thin_steel_sheet"));
         // 1钢锭 -> 6薄钢板
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.THIN_STEEL_SHEET,6)
                 .input(commonItems.STEEL_INGOT,1)
@@ -132,5 +129,23 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(commonItems.STEEL_INGOT),
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_INGOT)
                 ).offerTo(consumer, new Identifier("efdf","thin_steel_sheet_from_steel_ingot"));
+        // 3钢锭 -> 1钢瓶
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,commonItems.STEEL_BOTTLE,1)
+                .pattern("X X")
+                .pattern(" X ")
+                .input('X',commonItems.THIN_STEEL_SHEET)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.THIN_STEEL_SHEET),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.THIN_STEEL_SHEET)
+                ).offerTo(consumer,new Identifier("efdf","steel_bottle_from_thin_steel_sheet"));
+        // 1钢瓶 + 1牛磺酸结晶 -> 2牛磺酸饮料
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,efdfFood.TAURINE_DRINK_ITEM,2)
+                .pattern("AB")
+                .input('A',commonItems.STEEL_BOTTLE)
+                .input('B',efdfFood.TAURINE_CRYSTALS_ITEM)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.STEEL_BOTTLE),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_BOTTLE)
+                ).offerTo(consumer,new Identifier("efdf","taurine_drink_from_steel_bottle"));
     }
 }

@@ -21,6 +21,8 @@ public class commonItemGroup {
                         entries.add(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
                         entries.add(commonItems.STEEL_INGOT);
                         entries.add(commonItems.HIGH_TOUGHNESS_STEEL);
+                        entries.add(commonItems.STEEL_BOTTLE);
+                        entries.add(commonItems.THIN_STEEL_SHEET);
                         entries.add(efdfFood.TAURINE_DRINK_ITEM);
                         entries.add(efdfFood.TAURINE_CRYSTALS_ITEM);
                     }))

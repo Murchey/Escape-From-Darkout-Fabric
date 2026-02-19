@@ -27,6 +27,7 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(commonItems.TOOL_HAMMER, Models.GENERATED);
         itemModelGenerator.register(efdfFood.TAURINE_DRINK_ITEM, Models.GENERATED);
         itemModelGenerator.register(commonItems.THIN_STEEL_SHEET, Models.GENERATED);
+        itemModelGenerator.register(commonItems.STEEL_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(efdfFood.TAURINE_CRYSTALS_ITEM, Models.GENERATED);
     }
 }

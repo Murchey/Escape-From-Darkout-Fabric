@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "efdf:taurine_drink"
+        "recipe": "efdf:taurine_drink_from_thin_steel_sheet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "efdf:taurine_drink"
+      "efdf:taurine_drink_from_thin_steel_sheet"
     ]
   },
   "sends_telemetry_event": false

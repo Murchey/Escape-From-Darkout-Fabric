@@ -1,34 +1,34 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_steel_ingot": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "efdf:steel_bottle_from_thin_steel_sheet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thin_steel_sheet": {
       "conditions": {
         "items": [
           {
             "items": [
-              "efdf:steel_ingot"
+              "efdf:thin_steel_sheet"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "efdf:tool_hammer"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_steel_ingot",
+      "has_thin_steel_sheet",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "efdf:tool_hammer"
+      "efdf:steel_bottle_from_thin_steel_sheet"
     ]
   },
   "sends_telemetry_event": false
