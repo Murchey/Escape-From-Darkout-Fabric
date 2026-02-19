@@ -1,9 +1,8 @@
-// 1.20.1	2026-02-19T14:30:11.4931047	efdf/Model Definitions
+// 1.20.1	2026-02-19T17:25:38.388284	efdf/Model Definitions
 0da623f16d02efe73a4296438524817058fc27c5 assets\efdf\models\item\steel_block.json
 1a56b678b482fc10cb93224d28f52cec9cab5b90 assets\efdf\blockstates\high_toughness_steel_block.json
 40a8c489eb9d65a4e82b76138c11520d5db03746 assets\efdf\models\item\steel_ingot.json
-336dbc0e1721b6aa8dbb339353f02de9aad06804 assets\efdf\models\item\high_energy_fuel.json
-581eb3b6cf92a744c5b2b52d19bf48eb7d3eb34d assets\efdf\blockstates\high_energy_fuel.json
+ba3bab3cf9c130d00950436ecaac83e4eac45478 assets\efdf\models\item\high_energy_fuel.json
 7dcc96cb71c21fe243ddea590a0e0b01b8ade90d assets\efdf\blockstates\steel_block.json
 d02eb7a8900f875d78c648b6afdb36de49b41055 assets\efdf\models\item\taurine_drink.json
 45826397b1cf588bf7edfa000f952fbfb373a096 assets\efdf\models\block\steel_block.json

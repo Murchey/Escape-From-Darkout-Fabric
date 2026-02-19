@@ -1,3 +1,6 @@
 {
-  "parent": "efdf:block/high_energy_fuel"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "efdf:item/high_energy_fuel"
+  }
 }

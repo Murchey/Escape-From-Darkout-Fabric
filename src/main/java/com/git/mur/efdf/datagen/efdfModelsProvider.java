@@ -9,6 +9,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import com.git.mur.efdf.efdfItems.commonItems;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.Item;
 
 public class efdfModelsProvider extends FabricModelProvider {
     public efdfModelsProvider(FabricDataOutput output) {
@@ -19,7 +20,7 @@ public class efdfModelsProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(commonBlocks.STEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
-        blockStateModelGenerator.registerSimpleState(efdfFuel.HIGH_ENERGY_FUEL);//只创建简单的方块状态
+        //blockStateModelGenerator.registerSimpleState(efdfFuel.HIGH_ENERGY_FUEL);//只创建简单的方块状态
     }
 
     @Override
@@ -31,5 +32,6 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(commonItems.THIN_STEEL_SHEET, Models.GENERATED);
         itemModelGenerator.register(commonItems.STEEL_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(efdfFood.TAURINE_CRYSTALS_ITEM, Models.GENERATED);
+        itemModelGenerator.register(efdfFuel.HIGH_ENERGY_FUEL.asItem(), Models.GENERATED);
     }
 }
