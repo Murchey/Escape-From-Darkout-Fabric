@@ -1,6 +1,7 @@
 package com.git.mur.efdf.datagen;
 
 import com.git.mur.efdf.efdfItems.commonItems;
+import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -19,5 +20,7 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(commonItems.STEEL_INGOT,"钢锭");
         translationBuilder.add(commonItems.HIGH_TOUGHNESS_STEEL,"高韧钢");
         translationBuilder.add(commonItems.TOOL_HAMMER,"工具锤");
+        translationBuilder.add(efdfFood.TAURINE_DRINK_ITEM,"牛磺酸饮料");
+        translationBuilder.add(commonItems.THIN_STEEL_SHEET,"薄钢板");
     }
 }

@@ -12,3 +12,9 @@
 注册类型：item
 
 合成台：1 iron_ingot + 1 hammer -> 1 high_toughness_steel
+
+### 薄钢板 (thin_steel_sheet)
+
+注册类型：item
+
+合成台：1钢锭 -> 6薄钢板

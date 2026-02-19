@@ -8,6 +8,7 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -91,5 +92,12 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
         });
         RecipeProvider.offerSmelting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,300,"efdf");
         RecipeProvider.offerBlasting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,250,"efdf");
+        // 1钢锭 -> 6薄钢板
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, commonItems.THIN_STEEL_SHEET,6)
+                .input(commonItems.STEEL_INGOT,1)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.STEEL_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_INGOT)
+                ).offerTo(consumer, new Identifier("efdf","thin_steel_sheet_from_steel_ingot"));
     }
 }

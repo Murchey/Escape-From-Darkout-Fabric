@@ -1,6 +1,7 @@
 package com.git.mur.efdf.datagen;
 
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
+import com.git.mur.efdf.efdfItems.efdfFood;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -24,5 +25,7 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(commonItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(commonItems.HIGH_TOUGHNESS_STEEL, Models.GENERATED);
         itemModelGenerator.register(commonItems.TOOL_HAMMER, Models.GENERATED);
+        itemModelGenerator.register(efdfFood.TAURINE_DRINK_ITEM, Models.GENERATED);
+        itemModelGenerator.register(commonItems.THIN_STEEL_SHEET, Models.GENERATED);
     }
 }
