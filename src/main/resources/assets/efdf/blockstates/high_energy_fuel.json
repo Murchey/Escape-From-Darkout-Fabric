@@ -1,19 +1,8 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "efdf:block/high_energy_fuel",
-      "y": 180
-    },
-    "facing=south": {
-      "model": "efdf:block/high_energy_fuel"
-    },
-    "facing=west": {
-      "model": "efdf:block/high_energy_fuel",
-      "y": 270
-    },
-    "facing=east": {
-      "model": "efdf:block/high_energy_fuel",
-      "y": 90
-    }
+    "facing=north": { "model": "efdf:block/high_energy_fuel", "y": 180 },
+    "facing=south": { "model": "efdf:block/high_energy_fuel" },
+    "facing=west":  { "model": "efdf:block/high_energy_fuel", "y": 90 },
+    "facing=east":  { "model": "efdf:block/high_energy_fuel", "y": 270 }
   }
 }

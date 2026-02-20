@@ -86,11 +86,12 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_INGOT)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"high_toughness_steel_from_make"));
         // 1铁锭 -> 1钢锭
-        final List<ItemConvertible> IRON_INGOT_TO_STEEL_INGOT = Util.make(Lists.newArrayList(),list ->{
+        final List<ItemConvertible> IRON_TO_STEEL = Util.make(Lists.newArrayList(),list ->{
            list.add(Items.IRON_INGOT);
+           list.add(Items.IRON_BLOCK);
         });
-        RecipeProvider.offerSmelting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,300,Efdf.MODID);
-        RecipeProvider.offerBlasting(consumer, IRON_INGOT_TO_STEEL_INGOT, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.40f,250,Efdf.MODID);
+        RecipeProvider.offerSmelting(consumer, IRON_TO_STEEL, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,300,Efdf.MODID);
+        RecipeProvider.offerBlasting(consumer, IRON_TO_STEEL, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.40f,250,Efdf.MODID);
         // 1熟牛肉 -> 2牛磺酸结晶
         final List<ItemConvertible> STEAK_TO_TAURINE_CRYSTALS = Util.make(Lists.newArrayList(),list->{
             list.add(Items.COOKED_BEEF);

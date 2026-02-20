@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 250,
+  "experience": 0.4,
+  "group": "efdf",
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "result": "efdf:steel_ingot"
+}
