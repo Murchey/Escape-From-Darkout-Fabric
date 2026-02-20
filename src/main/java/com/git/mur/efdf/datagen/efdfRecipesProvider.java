@@ -93,9 +93,6 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
         RecipeProvider.offerSmelting(consumer, IRON_TO_STEEL, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.45f,300,Efdf.MODID);
         RecipeProvider.offerBlasting(consumer, IRON_TO_STEEL, RecipeCategory.MISC, commonItems.STEEL_INGOT,0.40f,250,Efdf.MODID);
         // 1熟牛肉 -> 2牛磺酸结晶
-        final List<ItemConvertible> STEAK_TO_TAURINE_CRYSTALS = Util.make(Lists.newArrayList(),list->{
-            list.add(Items.COOKED_BEEF);
-        });
         CookingRecipeJsonBuilder.createSmoking(
                 Ingredient.ofItems(Items.COOKED_BEEF),
                 RecipeCategory.MISC,

@@ -14,7 +14,7 @@
       "com.git.mur.efdf.efdfDataGenerator"
     ],
     "client": [
-      "com.git.mur.efdf.client.EfdfClient"
+      "com.git.mur.efdf.EfdfClient"
     ],
     "main": [
       "com.git.mur.efdf.Efdf"
