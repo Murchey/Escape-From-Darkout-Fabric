@@ -44,6 +44,7 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "curse.maven:dehydration-410830:5204866"
+    modImplementation "curse.maven:dehydration-348521:5729104"
 }
 
 processResources {

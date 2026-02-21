@@ -1,10 +1,10 @@
-// 1.20.1	2026-02-21T13:26:59.7311741	efdf/Recipes
+// 1.20.1	2026-02-21T20:25:39.400683	efdf/Recipes
 05a4a3316e644e24a274b3c3c5c9fa49da00d4d3 data\efdf\advancements\recipes\misc\steel_bottle_from_thin_steel_sheet.json
 1ac0680b90799ce4ff5916f2e0cbdb57d7c881f6 data\efdf\advancements\recipes\misc\taurine_drink_from_steel_bottle.json
 570050fd880bdbca131b553a5ebb137c69bf117a data\efdf\recipes\steel_ingot_from_blasting_iron_block.json
 296dc9301b39381fe7e00550e76a2a9f4f85052f data\efdf\advancements\recipes\misc\taurine_crystals_from_smelting.json
-3867724e5ed023ad5754448be34124bb3eaf1c02 data\efdf\advancements\recipes\food\braised_beef_can_from_cooked_beef.json
 d3cff8edf09dfa883c6227a900c2399868a92b19 data\efdf\recipes\braised_beef_can_small_from_cooked_beef.json
+3867724e5ed023ad5754448be34124bb3eaf1c02 data\efdf\advancements\recipes\food\braised_beef_can_from_cooked_beef.json
 f240078168dc95f59a3c5f2ff75ed5343fd066db data\efdf\advancements\recipes\food\compressed_biscuits_from_sugar_wheat.json
 57f6b6b5df9fdbe6d810c4551e1245ccbccfae8b data\efdf\advancements\recipes\misc\steel_ingot_from_blasting_iron_ingot.json
 b00d4b9d71c0ce4dc577466a261a84930d2236b5 data\efdf\recipes\taurine_drink_from_steel_bottle.json
