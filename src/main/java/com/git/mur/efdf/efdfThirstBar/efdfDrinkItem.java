@@ -12,7 +12,6 @@ import net.minecraft.stat.Stats;
 import net.minecraft.world.World;
 
 public class efdfDrinkItem extends DrinkItem {
-
     public efdfDrinkItem(Settings settings) {
         super(settings);
     }
