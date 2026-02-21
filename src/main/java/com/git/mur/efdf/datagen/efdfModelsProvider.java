@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import com.git.mur.efdf.efdfItems.commonItems;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 
 public class efdfModelsProvider extends FabricModelProvider {
@@ -37,5 +38,7 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(efdfFood.COMPRESSED_BISCUITS_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.BRAISED_BEEF_CAN_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM, Models.GENERATED);
+        itemModelGenerator.register(efdfFood.SWEET_BEAN_SAUCE_ITEM,Models.GENERATED);
+        itemModelGenerator.register(efdfFood.BOTTLED_WATER_ITEM,Models.GENERATED);
     }
 }

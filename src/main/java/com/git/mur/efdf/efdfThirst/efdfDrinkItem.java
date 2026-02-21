@@ -1,4 +1,4 @@
-package com.git.mur.efdf.efdfThirstBar;
+package com.git.mur.efdf.efdfThirst;
 
 import net.dehydration.api.DrinkEvent;
 import net.dehydration.api.DrinkItem;
@@ -25,7 +25,7 @@ public class efdfDrinkItem extends DrinkItem {
         if (playerEntity != null) {
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
             if (!playerEntity.getAbilities().creativeMode && this.isFood()) {
-                ((DrinkEvent)DrinkEvent.EVENT.invoker()).onDrink(stack, playerEntity);
+                ((DrinkEvent) DrinkEvent.EVENT.invoker()).onDrink(stack, playerEntity);
                 user.eatFood(world, stack);
             }
         }

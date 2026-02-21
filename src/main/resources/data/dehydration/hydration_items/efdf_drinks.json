@@ -11,5 +11,11 @@
       "efdf:braised_beef_can",
       "efdf:braised_beef_can_small"
     ]
+  },
+  "12": {
+    "replace": false,
+    "items": [
+      "efdf:bottled_water"
+    ]
   }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    " S ",
+    "GCG",
+    " G "
+  ],
+  "result": {
+    "item": "efdf:sweet_bean_sauce"
+  },
+  "show_notification": true
+}

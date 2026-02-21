@@ -31,5 +31,7 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(efdfFood.COMPRESSED_BISCUITS_ITEM,"压缩饼干");
         translationBuilder.add(efdfFood.BRAISED_BEEF_CAN_ITEM,"红烧牛肉罐头");
         translationBuilder.add(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM,"红焖牛肉罐头");
+        translationBuilder.add(efdfFood.SWEET_BEAN_SAUCE_ITEM,"甜面酱");
+        translationBuilder.add(efdfFood.BOTTLED_WATER_ITEM,"高山清泉");
     }
 }
