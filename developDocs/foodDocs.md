@@ -2,7 +2,13 @@
 
 ---
 
-### 压缩饼干
+### 压缩饼干 (compressed_biscuits)
+
+注册类型：item
+
+效果：恢复12饥饿值
+
+工作台：2wheat + 2sugar -> 1compressed_biscuits
 
 ### 牛磺酸饮料 (taurine_drink)
 

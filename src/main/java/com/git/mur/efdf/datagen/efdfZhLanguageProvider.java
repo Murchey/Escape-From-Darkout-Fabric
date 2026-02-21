@@ -28,5 +28,6 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(commonItems.STEEL_BOTTLE,"钢制瓶");
         translationBuilder.add(efdfFuel.HIGH_ENERGY_FUEL,"高能燃料");
         translationBuilder.add(efdfOffensiveGrenade.OFFENSIVE_GRENADE,"进攻雷");
+        translationBuilder.add(efdfFood.COMPRESSED_BISCUITS_ITEM,"压缩饼干");
     }
 }

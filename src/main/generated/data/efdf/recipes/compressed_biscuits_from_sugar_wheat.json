@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:wheat"
+    },
+    "B": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "AB ",
+    "AB "
+  ],
+  "result": {
+    "item": "efdf:compressed_biscuits"
+  },
+  "show_notification": true
+}

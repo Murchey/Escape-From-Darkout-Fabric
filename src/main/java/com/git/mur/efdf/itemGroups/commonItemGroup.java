@@ -29,6 +29,7 @@ public class commonItemGroup {
                         entries.add(efdfFood.TAURINE_CRYSTALS_ITEM);
                         entries.add(efdfFuel.HIGH_ENERGY_FUEL);
                         entries.add(efdfOffensiveGrenade.OFFENSIVE_GRENADE);
+                        entries.add(efdfFood.COMPRESSED_BISCUITS_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){

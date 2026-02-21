@@ -157,5 +157,15 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(Items.GUNPOWDER),
                         FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"instant_grenade_from_gunpowder"));
+        // 2小麦 + 2糖 -> 1压缩饼干
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.COMPRESSED_BISCUITS_ITEM)
+                .pattern("AB ")
+                .pattern("AB ")
+                .input('A',Items.WHEAT)
+                .input('B',Items.SUGAR)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.SUGAR),
+                        FabricRecipeProvider.conditionsFromItem(Items.SUGAR)
+                ).offerTo(consumer,new Identifier(Efdf.MODID,"compressed_biscuits_from_sugar_wheat"));
     }
 }
