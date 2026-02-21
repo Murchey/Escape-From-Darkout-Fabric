@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "minecraft:potion"
+    }
+  },
+  "pattern": [
+    "WW "
+  ],
+  "result": {
+    "item": "efdf:bottled_water"
+  },
+  "show_notification": true
+}

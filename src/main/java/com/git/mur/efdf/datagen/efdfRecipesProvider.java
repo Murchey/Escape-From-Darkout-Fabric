@@ -8,9 +8,9 @@ import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.potion.Potions;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
@@ -218,5 +218,17 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(Items.GLASS),
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"sweat_bean_sauce_from_cocoa_bean"));
+
+        // 2水玻璃瓶 -> 1高山清泉
+        ItemStack waterBottle = new ItemStack(Items.POTION);
+        PotionUtil.setPotion(waterBottle, Potions.WATER);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.BOTTLED_WATER_ITEM,1)
+                .input(waterBottle.getItem(),2)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.GLASS_BOTTLE),
+                        FabricRecipeProvider.conditionsFromItem(Items.GLASS_BOTTLE)
+                )
+                .offerTo(consumer, new Identifier(Efdf.MODID,"bottled_water_from_water_bottle"));
     }
 }
