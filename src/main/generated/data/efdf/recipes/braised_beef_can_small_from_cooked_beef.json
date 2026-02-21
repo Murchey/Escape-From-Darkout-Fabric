@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:cooked_beef"
+    },
+    "S": {
+      "item": "efdf:thin_steel_sheet"
+    }
+  },
+  "pattern": [
+    "SBS",
+    " S "
+  ],
+  "result": {
+    "item": "efdf:braised_beef_can_small"
+  },
+  "show_notification": true
+}

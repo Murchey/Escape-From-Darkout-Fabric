@@ -1,9 +1,11 @@
-// 1.20.1	2026-02-21T10:05:18.5867861	efdf/Model Definitions
+// 1.20.1	2026-02-21T13:26:59.7331739	efdf/Model Definitions
 0da623f16d02efe73a4296438524817058fc27c5 assets\efdf\models\item\steel_block.json
 9f0259e8c02645046413a79837c3e3f5eb91de53 assets\efdf\models\item\offensive_grenade.json
 40a8c489eb9d65a4e82b76138c11520d5db03746 assets\efdf\models\item\steel_ingot.json
+3a09ec3b76ceb71c017a88b39466c91b6ed619b5 assets\efdf\models\item\braised_beef_can.json
 1a56b678b482fc10cb93224d28f52cec9cab5b90 assets\efdf\blockstates\high_toughness_steel_block.json
 ba3bab3cf9c130d00950436ecaac83e4eac45478 assets\efdf\models\item\high_energy_fuel.json
+35f7114bc46f9a4251a7e8ac85ac7bd8b6cf6aeb assets\efdf\models\item\braised_beef_can_small.json
 7dcc96cb71c21fe243ddea590a0e0b01b8ade90d assets\efdf\blockstates\steel_block.json
 48e6f94289af57293816f6e4b5201a66c76e3d32 assets\efdf\models\item\compressed_biscuits.json
 d02eb7a8900f875d78c648b6afdb36de49b41055 assets\efdf\models\item\taurine_drink.json

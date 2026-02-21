@@ -8,6 +8,7 @@ import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -158,7 +159,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"instant_grenade_from_gunpowder"));
         // 2小麦 + 2糖 -> 1压缩饼干
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.COMPRESSED_BISCUITS_ITEM)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.COMPRESSED_BISCUITS_ITEM,1)
                 .pattern("AB ")
                 .pattern("AB ")
                 .input('A',Items.WHEAT)
@@ -167,5 +168,26 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(Items.SUGAR),
                         FabricRecipeProvider.conditionsFromItem(Items.SUGAR)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"compressed_biscuits_from_sugar_wheat"));
+        // 2cooked_beef + 3薄钢板 -> 1红烧牛肉罐头
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.BRAISED_BEEF_CAN_ITEM,1)
+                .pattern(" B ")
+                .pattern("SBS")
+                .pattern(" S ")
+                .input('S',commonItems.THIN_STEEL_SHEET)
+                .input('B',Items.COOKED_BEEF)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.THIN_STEEL_SHEET),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.THIN_STEEL_SHEET)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"braised_beef_can_from_cooked_beef"));
+        // 1熟牛肉 + 3薄钢板 -> 1红焖牛肉罐头
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM, 1)
+                .pattern("SBS")
+                .pattern(" S ")
+                .input('S', commonItems.THIN_STEEL_SHEET)
+                .input('B', Items.COOKED_BEEF)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.THIN_STEEL_SHEET),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.THIN_STEEL_SHEET)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"braised_beef_can_small_from_cooked_beef"));
     }
 }

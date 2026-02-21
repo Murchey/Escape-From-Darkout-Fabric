@@ -25,11 +25,21 @@ public class efdfFood {
     //压缩饼干，无效果，回复12饥饿值
     public static final FoodComponent COMPRESSED_BISCUITS = (new FoodComponent.Builder()).hunger(12).saturationModifier(2.75f).build();
     public static final Item COMPRESSED_BISCUITS_ITEM = new Item(new Item.Settings().food(COMPRESSED_BISCUITS).maxCount(12));
+    //红烧牛肉罐头，力量1，持续60秒，回复16饥饿值（两块熟牛肉）
+    public static final FoodComponent BRAISED_BEEF_CAN = (new FoodComponent.Builder()).hunger(16).saturationModifier(25.6f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20*60,0),1.0f).build();
+    public static final Item BRAISED_BEEF_CAN_ITEM = new Item(new Item.Settings().food(BRAISED_BEEF_CAN));
+    //红焖牛肉罐头，力量1，持续45秒，回复8饥饿值
+    public static final FoodComponent BRAISED_BEEF_CAN_SMALL = (new FoodComponent.Builder()).hunger(8).saturationModifier(16f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20*45,0),1.0f).build();
+    public static final Item BRAISED_BEEF_CAN_SMALL_ITEM = new Item(new Item.Settings().food(BRAISED_BEEF_CAN_SMALL));
 
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"compressed_biscuits"),COMPRESSED_BISCUITS_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"braised_beef_can"),BRAISED_BEEF_CAN_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"braised_beef_can_small"),BRAISED_BEEF_CAN_SMALL_ITEM);
     }
 
 }

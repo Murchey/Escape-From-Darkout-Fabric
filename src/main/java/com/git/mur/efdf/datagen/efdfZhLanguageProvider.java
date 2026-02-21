@@ -29,5 +29,7 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(efdfFuel.HIGH_ENERGY_FUEL,"高能燃料");
         translationBuilder.add(efdfOffensiveGrenade.OFFENSIVE_GRENADE,"进攻雷");
         translationBuilder.add(efdfFood.COMPRESSED_BISCUITS_ITEM,"压缩饼干");
+        translationBuilder.add(efdfFood.BRAISED_BEEF_CAN_ITEM,"红烧牛肉罐头");
+        translationBuilder.add(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM,"红焖牛肉罐头");
     }
 }
