@@ -3,14 +3,13 @@ package com.git.mur.efdf.datagen;
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
 import com.git.mur.efdf.efdfBlocks.efdfFuel;
 import com.git.mur.efdf.efdfItems.efdfFood;
-import com.git.mur.efdf.efdfItems.efdfInstantGrenade;
+import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import com.git.mur.efdf.efdfItems.commonItems;
 import net.minecraft.data.client.Models;
-import net.minecraft.item.Item;
 
 public class efdfModelsProvider extends FabricModelProvider {
     public efdfModelsProvider(FabricDataOutput output) {
@@ -34,6 +33,6 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(commonItems.STEEL_BOTTLE, Models.GENERATED);
         itemModelGenerator.register(efdfFood.TAURINE_CRYSTALS_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFuel.HIGH_ENERGY_FUEL.asItem(), Models.GENERATED);
-        itemModelGenerator.register(efdfInstantGrenade.INSTANT_GRENADE, Models.GENERATED);
+        itemModelGenerator.register(efdfOffensiveGrenade.OFFENSIVE_GRENADE, Models.GENERATED);
     }
 }

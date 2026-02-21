@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "efdf:item/instant_grenade"
+    "layer0": "efdf:item/offensive_grenade"
   }
 }

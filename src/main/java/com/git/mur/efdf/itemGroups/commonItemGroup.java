@@ -3,7 +3,7 @@ package com.git.mur.efdf.itemGroups;
 import com.git.mur.efdf.efdfBlocks.efdfFuel;
 import com.git.mur.efdf.efdfItems.commonItems;
 import com.git.mur.efdf.efdfItems.efdfFood;
-import com.git.mur.efdf.efdfItems.efdfInstantGrenade;
+import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
@@ -28,7 +28,7 @@ public class commonItemGroup {
                         entries.add(efdfFood.TAURINE_DRINK_ITEM);
                         entries.add(efdfFood.TAURINE_CRYSTALS_ITEM);
                         entries.add(efdfFuel.HIGH_ENERGY_FUEL);
-                        entries.add(efdfInstantGrenade.INSTANT_GRENADE);
+                        entries.add(efdfOffensiveGrenade.OFFENSIVE_GRENADE);
                     }))
                     .build();
     public static void initItemGroup(){

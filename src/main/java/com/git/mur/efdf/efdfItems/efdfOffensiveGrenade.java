@@ -33,20 +33,20 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
 
-public class efdfInstantGrenade extends ThrownItemEntity {
+public class efdfOffensiveGrenade extends ThrownItemEntity {
 
-    private static final TrackedData<Integer> FUSE = DataTracker.registerData(efdfInstantGrenade.class, TrackedDataHandlerRegistry.INTEGER);
+    private static final TrackedData<Integer> FUSE = DataTracker.registerData(efdfOffensiveGrenade.class, TrackedDataHandlerRegistry.INTEGER);
     private static final int DEFAULT_FUSE = 80;
 
     private int fuseTimer = DEFAULT_FUSE;
     private boolean inGround = false;
 
-    public static final Item INSTANT_GRENADE = new GrenadeItem(new FabricItemSettings().maxCount(16));
-    public static final EntityType<efdfInstantGrenade> INSTANT_GRENADE_PROJECTILE =
+    public static final Item OFFENSIVE_GRENADE = new GrenadeItem(new FabricItemSettings().maxCount(16));
+    public static final EntityType<efdfOffensiveGrenade> INSTANT_GRENADE_PROJECTILE =
             Registry.register(
                     Registries.ENTITY_TYPE,
-                    new Identifier(Efdf.MODID, "instant_grenade_projectile"),
-                    FabricEntityTypeBuilder.<efdfInstantGrenade>create(SpawnGroup.MISC, efdfInstantGrenade::new)
+                    new Identifier(Efdf.MODID, "grenade_projectile"),
+                    FabricEntityTypeBuilder.<efdfOffensiveGrenade>create(SpawnGroup.MISC, efdfOffensiveGrenade::new)
                             .dimensions(EntityDimensions.fixed(0.25f, 0.25f))
                             .trackRangeBlocks(64)
                             .trackedUpdateRate(1)
@@ -55,15 +55,15 @@ public class efdfInstantGrenade extends ThrownItemEntity {
             );
 
     public static void grenadeInit() {
-        Registry.register(Registries.ITEM, new Identifier(Efdf.MODID, "instant_grenade"), INSTANT_GRENADE);
+        Registry.register(Registries.ITEM, new Identifier(Efdf.MODID, "offensive_grenade"), OFFENSIVE_GRENADE);
     }
 
-    public efdfInstantGrenade(EntityType<? extends efdfInstantGrenade> entityType, World world) {
+    public efdfOffensiveGrenade(EntityType<? extends efdfOffensiveGrenade> entityType, World world) {
         super(entityType, world);
         this.noClip = false;
     }
 
-    public efdfInstantGrenade(World world, LivingEntity owner) {
+    public efdfOffensiveGrenade(World world, LivingEntity owner) {
         super(INSTANT_GRENADE_PROJECTILE, owner, world);
     }
 
@@ -246,7 +246,7 @@ public class efdfInstantGrenade extends ThrownItemEntity {
 
     @Override
     protected Item getDefaultItem() {
-        return INSTANT_GRENADE;
+        return OFFENSIVE_GRENADE;
     }
 
     @Override
@@ -268,7 +268,7 @@ public class efdfInstantGrenade extends ThrownItemEntity {
                     1.0F, 1.0F);
 
             if (!world.isClient) {
-                efdfInstantGrenade grenade = new efdfInstantGrenade(world, user);
+                efdfOffensiveGrenade grenade = new efdfOffensiveGrenade(world, user);
                 grenade.setItem(itemStack);
                 grenade.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.0F, 1.0F);
                 world.spawnEntity(grenade);

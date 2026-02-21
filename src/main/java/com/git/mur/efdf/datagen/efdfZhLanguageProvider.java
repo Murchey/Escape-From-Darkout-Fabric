@@ -3,7 +3,7 @@ package com.git.mur.efdf.datagen;
 import com.git.mur.efdf.efdfBlocks.efdfFuel;
 import com.git.mur.efdf.efdfItems.commonItems;
 import com.git.mur.efdf.efdfItems.efdfFood;
-import com.git.mur.efdf.efdfItems.efdfInstantGrenade;
+import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -27,6 +27,6 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(efdfFood.TAURINE_CRYSTALS_ITEM,"牛磺酸结晶");
         translationBuilder.add(commonItems.STEEL_BOTTLE,"钢制瓶");
         translationBuilder.add(efdfFuel.HIGH_ENERGY_FUEL,"高能燃料");
-        translationBuilder.add(efdfInstantGrenade.INSTANT_GRENADE_PROJECTILE,"摔炮");
+        translationBuilder.add(efdfOffensiveGrenade.OFFENSIVE_GRENADE,"进攻雷");
     }
 }

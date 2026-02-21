@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "efdf:high_toughness_steel"
+    },
+    "B": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "efdf:offensive_grenade"
+  },
+  "show_notification": true
+}

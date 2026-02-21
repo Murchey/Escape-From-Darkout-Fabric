@@ -4,6 +4,7 @@ import com.git.mur.efdf.Efdf;
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
 import com.git.mur.efdf.efdfItems.commonItems;
 import com.git.mur.efdf.efdfItems.efdfFood;
+import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.*;
@@ -146,5 +147,15 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(commonItems.STEEL_BOTTLE),
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_BOTTLE)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"taurine_drink_from_steel_bottle"));
+        // 3高韧钢 + 1火药 -> 1进攻雷
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, efdfOffensiveGrenade.OFFENSIVE_GRENADE,1)
+                .pattern("ABA")
+                .pattern(" A ")
+                .input('A',commonItems.HIGH_TOUGHNESS_STEEL)
+                .input('B',Items.GUNPOWDER)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.GUNPOWDER),
+                        FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER)
+                ).offerTo(consumer,new Identifier(Efdf.MODID,"instant_grenade_from_gunpowder"));
     }
 }

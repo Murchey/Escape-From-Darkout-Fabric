@@ -23,7 +23,7 @@ public class GrenadeItem extends Item {
                 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
         if (!world.isClient) {
-            efdfInstantGrenade grenade = new efdfInstantGrenade(world, user);
+            efdfOffensiveGrenade grenade = new efdfOffensiveGrenade(world, user);
             grenade.setItem(itemStack);
             grenade.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
             world.spawnEntity(grenade);

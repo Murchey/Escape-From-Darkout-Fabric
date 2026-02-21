@@ -2,7 +2,7 @@ package com.git.mur.efdf.efdfBlocks;
 
 
 import com.git.mur.efdf.Efdf;
-import com.git.mur.efdf.efdfItems.efdfInstantGrenade;
+import com.git.mur.efdf.efdfItems.efdfOffensiveGrenade;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -16,7 +16,7 @@ public class commonBlocks {
     // 一般方块注册类
     public static void initBlocks(){
         efdfFuel.fuelInit();
-        efdfInstantGrenade.grenadeInit();
+        efdfOffensiveGrenade.grenadeInit();
 
         Registry.register(Registries.BLOCK, Identifier.of(Efdf.MODID,"steel_block"),STEEL_BLOCK);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"steel_block"),new BlockItem(STEEL_BLOCK,new Item.Settings()));
