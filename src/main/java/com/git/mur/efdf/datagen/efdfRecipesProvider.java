@@ -17,6 +17,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import org.apache.commons.compress.utils.Lists;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -107,7 +108,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 Ingredient.ofItems(Items.COOKED_BEEF),
                 RecipeCategory.MISC,
                 efdfFood.TAURINE_CRYSTALS_ITEM,
-                0.35f,
+                0.15f,
                 100).criterion(
                     FabricRecipeProvider.hasItem(Items.COOKED_BEEF),
                     FabricRecipeProvider.conditionsFromItem(Items.COOKED_BEEF)
@@ -259,5 +260,49 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(efdfFood.TAURINE_CRYSTALS_ITEM),
                         FabricRecipeProvider.conditionsFromItem(efdfFood.TAURINE_CRYSTALS_ITEM)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"redbull_from_steel_bottle"));
+
+        // 1牛奶桶 -> 1炼乳
+        CookingRecipeJsonBuilder.createSmelting(
+                Ingredient.ofItems(Items.MILK_BUCKET),
+                RecipeCategory.FOOD,
+                efdfFood.CONDENSED_MILK_ITEM,
+                0.35f,
+                20*5
+        ).criterion(
+                FabricRecipeProvider.hasItem(Items.MILK_BUCKET),
+                FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET)
+        ).offerTo(consumer, new Identifier(Efdf.MODID,"milk_bucket_smelt_to_condensed_milk"));
+        CookingRecipeJsonBuilder.createSmoking(
+                Ingredient.ofItems(Items.MILK_BUCKET),
+                RecipeCategory.FOOD,
+                efdfFood.CONDENSED_MILK_ITEM,
+                0.15f,
+                2*25
+        ).criterion(
+                FabricRecipeProvider.hasItem(Items.MILK_BUCKET),
+                FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET)
+        ).offerTo(consumer, new Identifier(Efdf.MODID,"milk_bucket_smoke_to_condensed_milk"));
+
+        // 2炼乳 + 1钢瓶 -> 1炼乳罐头
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.CONDENSED_MILK_CAN_ITEM, 1)
+                .input(efdfFood.CONDENSED_MILK_ITEM, 2)
+                .input(commonItems.STEEL_BOTTLE, 1)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.MILK_BUCKET),
+                        FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"condensed_milk_can_from_steel_bottle"));
+
+        // 2炼乳 + 3薄钢板 -> 1炼乳罐头
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.CONDENSED_MILK_CAN_ITEM,1)
+                .pattern(" C ")
+                .pattern("SCS")
+                .pattern(" S ")
+                .input('C',efdfFood.CONDENSED_MILK_ITEM)
+                .input('S',commonItems.THIN_STEEL_SHEET)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.THIN_STEEL_SHEET),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.THIN_STEEL_SHEET)
+                )
+                .offerTo(consumer, new Identifier(Efdf.MODID,"condensed_milk_can_from_steel_sheet"));
     }
 }

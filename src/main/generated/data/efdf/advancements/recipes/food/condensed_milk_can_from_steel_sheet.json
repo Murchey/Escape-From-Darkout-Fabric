@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "efdf:condensed_milk_can_from_steel_sheet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thin_steel_sheet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efdf:thin_steel_sheet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_thin_steel_sheet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "efdf:condensed_milk_can_from_steel_sheet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

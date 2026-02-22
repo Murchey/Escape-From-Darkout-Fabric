@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "efdf:condensed_milk"
+    },
+    "S": {
+      "item": "efdf:thin_steel_sheet"
+    }
+  },
+  "pattern": [
+    " C ",
+    "SCS",
+    " S "
+  ],
+  "result": {
+    "item": "efdf:condensed_milk_can"
+  },
+  "show_notification": true
+}

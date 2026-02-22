@@ -1,9 +1,7 @@
 package com.git.mur.efdf.efdfItems;
 
 import com.git.mur.efdf.Efdf;
-import com.git.mur.efdf.efdfThirst.efdfDrinkItem;
-import com.git.mur.efdf.efdfThirst.efdfCompressedBiscuits;
-import com.git.mur.efdf.efdfThirst.efdfSweetBeanSauce;
+import com.git.mur.efdf.efdfThirst.*;
 import net.dehydration.api.DrinkItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -62,6 +60,13 @@ public class efdfFood {
             .build();
     public static final Item REDBULL_ITEM = new efdfDrinkItem(new Item.Settings().food(REDBULL).maxCount(16));
 
+    //炼乳,口渴-9,饥饿+10
+    public static final FoodComponent CONDENSED_MILK = (new FoodComponent.Builder()).alwaysEdible().hunger(10).saturationModifier(2.8f).build();
+    public static final Item CONDENSED_MILK_ITEM = new efdfCondensedMilkItem(new Item.Settings().food(CONDENSED_MILK));
+
+    //炼乳罐头，口渴-18，饥饿+20
+    public static final FoodComponent CONDENSED_MILK_CAN = (new FoodComponent.Builder()).alwaysEdible().hunger(20).saturationModifier(2.8f).build();
+    public static final Item CONDENSED_MILK_CAN_ITEM = new efdfCondensedMilkCanItem(new Item.Settings().food(CONDENSED_MILK_CAN).recipeRemainder(commonItems.STEEL_BOTTLE));
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
@@ -72,6 +77,8 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"bottled_water"),BOTTLED_WATER_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"box_milk"),BOX_MILK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"redbull"),REDBULL_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"condensed_milk"),CONDENSED_MILK_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"condensed_milk_can"),CONDENSED_MILK_CAN_ITEM);
     }
 
 }

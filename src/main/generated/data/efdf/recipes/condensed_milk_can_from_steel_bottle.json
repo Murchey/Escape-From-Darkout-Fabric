@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "efdf:condensed_milk"
+    },
+    {
+      "item": "efdf:condensed_milk"
+    },
+    {
+      "item": "efdf:steel_bottle"
+    }
+  ],
+  "result": {
+    "item": "efdf:condensed_milk_can"
+  }
+}

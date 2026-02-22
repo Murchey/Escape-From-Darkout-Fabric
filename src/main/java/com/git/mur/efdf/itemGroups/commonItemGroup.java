@@ -36,6 +36,8 @@ public class commonItemGroup {
                         entries.add(efdfFood.BOTTLED_WATER_ITEM);
                         entries.add(efdfFood.BOX_MILK_ITEM);
                         entries.add(efdfFood.REDBULL_ITEM);
+                        entries.add(efdfFood.CONDENSED_MILK_ITEM);
+                        entries.add(efdfFood.CONDENSED_MILK_CAN_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){
