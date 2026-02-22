@@ -1,15 +1,27 @@
 {
+  "2": {
+    "replace": false,
+    "items": [
+      "efdf:braised_beef_can",
+      "efdf:braised_beef_can_small"
+    ]
+  },
+  "3": {
+    "replace": false,
+    "items": [
+      "efdf:box_milk"
+    ]
+  },
   "4": {
     "replace": false,
     "items": [
       "efdf:taurine_drink"
     ]
   },
-  "2": {
+  "5": {
     "replace": false,
     "items": [
-      "efdf:braised_beef_can",
-      "efdf:braised_beef_can_small"
+      "efdf:redbull"
     ]
   },
   "12": {

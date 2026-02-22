@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class efdfFood {
     //牛磺酸饮料，效果：力量3 速度2 持续300秒
-    public static final FoodComponent TAURINE_DRINK = (new FoodComponent.Builder()).hunger(6).saturationModifier(5.5f)
+    public static final FoodComponent TAURINE_DRINK = (new FoodComponent.Builder()).hunger(3).saturationModifier(5.5f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*300, 2,false,false,true),1.0f)
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20*300, 1,false,false,true),1.0f)
             .alwaysEdible()
@@ -23,7 +23,7 @@ public class efdfFood {
     public static final Item TAURINE_DRINK_ITEM = new efdfDrinkItem(new Item.Settings().food(TAURINE_DRINK).maxCount(12));
 
     //牛磺酸结晶，效果：力量1 速度1 持续200秒
-    public static final FoodComponent TAURINE_CRYSTALS = (new FoodComponent.Builder()).hunger(2).saturationModifier(3.5f).alwaysEdible()
+    public static final FoodComponent TAURINE_CRYSTALS = (new FoodComponent.Builder()).hunger(1).saturationModifier(3.5f).alwaysEdible()
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED,20*200,0,false,false,true),0.75f)
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,20*200,0,false,false,true),0.75f)
             .build();
@@ -53,7 +53,14 @@ public class efdfFood {
 
     //牛奶，口渴+3
     public static final FoodComponent BOX_MILK = (new FoodComponent.Builder()).hunger(3).saturationModifier(0.8f).alwaysEdible().build();
-    public static final Item BOX_MILK_ITEM = new efdfDrinkItem(new Item.Settings().food(BOX_MILK));
+    public static final Item BOX_MILK_ITEM = new efdfDrinkItem(new Item.Settings().food(BOX_MILK).maxCount(16));
+
+    //红牛，口渴+5，力量2，60秒，速度2，六十秒
+    public static final FoodComponent REDBULL = (new FoodComponent.Builder()).alwaysEdible().hunger(6).saturationModifier(2.0f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,60*20,1,false,false,true),1.0f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED,60*20,1,false,false,true),1.0f)
+            .build();
+    public static final Item REDBULL_ITEM = new efdfDrinkItem(new Item.Settings().food(REDBULL).maxCount(16));
 
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
@@ -64,6 +71,7 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"sweet_bean_sauce"),SWEET_BEAN_SAUCE_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"bottled_water"),BOTTLED_WATER_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"box_milk"),BOX_MILK_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"redbull"),REDBULL_ITEM);
     }
 
 }

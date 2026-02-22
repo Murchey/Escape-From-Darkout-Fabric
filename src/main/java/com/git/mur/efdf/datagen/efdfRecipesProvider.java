@@ -219,12 +219,12 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"sweat_bean_sauce_from_cocoa_bean"));
 
-        // 2水玻璃瓶 -> 1高山清泉 (无空瓶返还)
+        // 2水玻璃瓶 -> 1高山清泉（无瓶返还）
         ItemStack waterBottle = new ItemStack(Items.POTION);
         PotionUtil.setPotion(waterBottle, Potions.WATER);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.BOTTLED_WATER_ITEM,1)
-                .input(waterBottle.getItem(),2)
+                .input(Ingredient.ofStacks(waterBottle),2)
                 .criterion(
                         FabricRecipeProvider.hasItem(Items.GLASS_BOTTLE),
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS_BOTTLE)
@@ -233,10 +233,31 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
 
         // 1牛奶桶 -> 3金丝雀牛奶
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.BOX_MILK_ITEM,3)
-                .input(Items.MILK_BUCKET,1)
+                .input(Ingredient.ofItems(Items.MILK_BUCKET),1)
                 .criterion(
                         FabricRecipeProvider.hasItem(Items.MILK_BUCKET),
                         FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"box_milk_from_milk_bucket"));
+
+        //3薄钢板 + 2牛磺酸结晶 -> 1红牛
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.REDBULL_ITEM,1)
+                .pattern(" T ")
+                .pattern("STS")
+                .pattern(" S ")
+                .input('S',commonItems.THIN_STEEL_SHEET)
+                .input('T',efdfFood.TAURINE_CRYSTALS_ITEM)
+                .criterion(
+                        FabricRecipeProvider.hasItem(efdfFood.TAURINE_CRYSTALS_ITEM),
+                        FabricRecipeProvider.conditionsFromItem(efdfFood.TAURINE_CRYSTALS_ITEM)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"redbull_from_thin_steel_sheet"));
+
+        // 1钢制瓶 + 2牛磺酸 -> 1红牛
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.REDBULL_ITEM,1)
+                .input(commonItems.STEEL_BOTTLE,1)
+                .input(efdfFood.TAURINE_CRYSTALS_ITEM,2)
+                .criterion(
+                        FabricRecipeProvider.hasItem(efdfFood.TAURINE_CRYSTALS_ITEM),
+                        FabricRecipeProvider.conditionsFromItem(efdfFood.TAURINE_CRYSTALS_ITEM)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"redbull_from_steel_bottle"));
     }
 }

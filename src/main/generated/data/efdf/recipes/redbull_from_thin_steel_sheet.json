@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "efdf:thin_steel_sheet"
+    },
+    "T": {
+      "item": "efdf:taurine_crystals"
+    }
+  },
+  "pattern": [
+    " T ",
+    "STS",
+    " S "
+  ],
+  "result": {
+    "item": "efdf:redbull"
+  },
+  "show_notification": true
+}

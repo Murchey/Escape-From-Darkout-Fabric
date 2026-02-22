@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_taurine_crystals": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "efdf:taurine_crystals"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "efdf:redbull_from_steel_bottle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_taurine_crystals",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "efdf:redbull_from_steel_bottle"
+    ]
+  },
+  "sends_telemetry_event": false
+}

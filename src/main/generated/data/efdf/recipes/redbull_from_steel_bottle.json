@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "efdf:steel_bottle"
+    },
+    {
+      "item": "efdf:taurine_crystals"
+    },
+    {
+      "item": "efdf:taurine_crystals"
+    }
+  ],
+  "result": {
+    "item": "efdf:redbull"
+  }
+}

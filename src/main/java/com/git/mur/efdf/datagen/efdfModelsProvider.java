@@ -41,5 +41,6 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(efdfFood.SWEET_BEAN_SAUCE_ITEM,Models.GENERATED);
         itemModelGenerator.register(efdfFood.BOTTLED_WATER_ITEM,Models.GENERATED);
         itemModelGenerator.register(efdfFood.BOX_MILK_ITEM,Models.GENERATED);
+        itemModelGenerator.register(efdfFood.REDBULL_ITEM,Models.GENERATED);
     }
 }

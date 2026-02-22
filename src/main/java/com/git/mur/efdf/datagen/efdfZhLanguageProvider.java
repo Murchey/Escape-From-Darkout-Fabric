@@ -34,5 +34,6 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(efdfFood.SWEET_BEAN_SAUCE_ITEM,"甜面酱");
         translationBuilder.add(efdfFood.BOTTLED_WATER_ITEM,"高山清泉");
         translationBuilder.add(efdfFood.BOX_MILK_ITEM,"金丝雀牛奶");
+        translationBuilder.add(efdfFood.REDBULL_ITEM,"红阳运动饮料");
     }
 }
