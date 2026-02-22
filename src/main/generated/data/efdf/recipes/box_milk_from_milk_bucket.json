@@ -3,13 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:potion"
-    },
-    {
-      "item": "minecraft:potion"
+      "item": "minecraft:milk_bucket"
     }
   ],
   "result": {
-    "item": "efdf:bottled_water"
+    "count": 3,
+    "item": "efdf:box_milk"
   }
 }

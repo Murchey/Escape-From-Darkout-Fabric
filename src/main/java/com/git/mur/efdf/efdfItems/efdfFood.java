@@ -49,7 +49,12 @@ public class efdfFood {
 
     //高山清泉，口渴+12
     public static final FoodComponent BOTTLED_WATER = (new FoodComponent.Builder()).hunger(0).alwaysEdible().saturationModifier(0f).build();
-    public static final Item BOTTLED_WATER_ITEM = new DrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16));
+    public static final Item BOTTLED_WATER_ITEM = new efdfDrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16));
+
+    //牛奶，口渴+3
+    public static final FoodComponent BOX_MILK = (new FoodComponent.Builder()).hunger(3).saturationModifier(0.8f).alwaysEdible().build();
+    public static final Item BOX_MILK_ITEM = new efdfDrinkItem(new Item.Settings().food(BOX_MILK));
+
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
@@ -58,6 +63,7 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"braised_beef_can_small"),BRAISED_BEEF_CAN_SMALL_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"sweet_bean_sauce"),SWEET_BEAN_SAUCE_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"bottled_water"),BOTTLED_WATER_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"box_milk"),BOX_MILK_ITEM);
     }
 
 }

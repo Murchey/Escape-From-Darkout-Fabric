@@ -219,7 +219,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"sweat_bean_sauce_from_cocoa_bean"));
 
-        // 2水玻璃瓶 -> 1高山清泉
+        // 2水玻璃瓶 -> 1高山清泉 (无空瓶返还)
         ItemStack waterBottle = new ItemStack(Items.POTION);
         PotionUtil.setPotion(waterBottle, Potions.WATER);
 
@@ -230,5 +230,13 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS_BOTTLE)
                 )
                 .offerTo(consumer, new Identifier(Efdf.MODID,"bottled_water_from_water_bottle"));
+
+        // 1牛奶桶 -> 3金丝雀牛奶
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.BOX_MILK_ITEM,3)
+                .input(Items.MILK_BUCKET,1)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.MILK_BUCKET),
+                        FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"box_milk_from_milk_bucket"));
     }
 }

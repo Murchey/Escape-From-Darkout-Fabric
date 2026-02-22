@@ -34,6 +34,7 @@ public class commonItemGroup {
                         entries.add(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM);
                         entries.add(efdfFood.SWEET_BEAN_SAUCE_ITEM);
                         entries.add(efdfFood.BOTTLED_WATER_ITEM);
+                        entries.add(efdfFood.BOX_MILK_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){
