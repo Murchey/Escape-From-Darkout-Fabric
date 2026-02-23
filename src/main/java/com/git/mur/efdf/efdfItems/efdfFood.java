@@ -48,7 +48,7 @@ public class efdfFood {
 
     //高山清泉，口渴+12
     public static final FoodComponent BOTTLED_WATER = (new FoodComponent.Builder()).hunger(0).alwaysEdible().saturationModifier(0f).build();
-    public static final Item BOTTLED_WATER_ITEM = new efdfDrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16),Items.AIR);
+    public static final Item BOTTLED_WATER_ITEM = new efdfDrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16),Items.BUCKET);
 
     //牛奶，口渴+3
     public static final FoodComponent BOX_MILK = (new FoodComponent.Builder()).hunger(3).saturationModifier(0.8f).alwaysEdible().build();

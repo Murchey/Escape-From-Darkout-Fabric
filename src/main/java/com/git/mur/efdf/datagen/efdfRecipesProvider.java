@@ -218,12 +218,12 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"sweat_bean_sauce_from_cocoa_bean"));
 
-        // 2水玻璃瓶 -> 1高山清泉（无瓶返还）
+        // 1水桶 -> 1高山清泉
         ItemStack waterBottle = new ItemStack(Items.POTION);
         PotionUtil.setPotion(waterBottle, Potions.WATER);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.BOTTLED_WATER_ITEM,1)
-                .input(Ingredient.ofStacks(waterBottle),2)
+                .input(Items.WATER_BUCKET,1)
                 .criterion(
                         FabricRecipeProvider.hasItem(Items.GLASS_BOTTLE),
                         FabricRecipeProvider.conditionsFromItem(Items.GLASS_BOTTLE)
