@@ -2,6 +2,7 @@ package com.git.mur.efdf;
 
 import com.git.mur.efdf.efdfBlocks.commonBlocks;
 import com.git.mur.efdf.efdfItems.commonItems;
+import com.git.mur.efdf.mixin.efdfFurnaceEvents;
 import net.fabricmc.api.ModInitializer;
 import com.git.mur.efdf.itemGroups.commonItemGroup;
 
