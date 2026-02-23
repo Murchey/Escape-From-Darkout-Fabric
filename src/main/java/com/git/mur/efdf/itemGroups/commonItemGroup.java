@@ -17,7 +17,7 @@ public class commonItemGroup {
     public static final ItemGroup EFDF_ITEM_GROUP =
             FabricItemGroup.builder()
                     .icon(() -> new ItemStack(commonBlocks.STEEL_BLOCK))
-                    .displayName(Text.translatable("commonItems"))
+                    .displayName(Text.translatable("Escape-From-Darkout:Fabric"))
                     .entries(((displayContext, entries) ->{
                         entries.add(commonBlocks.STEEL_BLOCK);
                         entries.add(commonBlocks.HIGH_TOUGHNESS_STEEL_BLOCK);
@@ -34,10 +34,12 @@ public class commonItemGroup {
                         entries.add(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM);
                         entries.add(efdfFood.SWEET_BEAN_SAUCE_ITEM);
                         entries.add(efdfFood.BOTTLED_WATER_ITEM);
+                        entries.add(efdfFood.THERMOS_ITEM);
                         entries.add(efdfFood.BOX_MILK_ITEM);
                         entries.add(efdfFood.REDBULL_ITEM);
                         entries.add(efdfFood.CONDENSED_MILK_ITEM);
                         entries.add(efdfFood.CONDENSED_MILK_CAN_ITEM);
+                        entries.add(efdfFood.COMPRESSED_BISCUITS_BIG_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){

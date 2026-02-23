@@ -174,11 +174,9 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"instant_grenade_from_gunpowder"));
 
         // 2小麦 + 2糖 -> 1压缩饼干
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.COMPRESSED_BISCUITS_ITEM,1)
-                .pattern("AB ")
-                .pattern("AB ")
-                .input('A',Items.WHEAT)
-                .input('B',Items.SUGAR)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, efdfFood.COMPRESSED_BISCUITS_ITEM,1)
+                .input(Items.WHEAT,2)
+                .input(Items.SUGAR,2)
                 .criterion(
                         FabricRecipeProvider.hasItem(Items.SUGAR),
                         FabricRecipeProvider.conditionsFromItem(Items.SUGAR)
@@ -304,5 +302,23 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(commonItems.THIN_STEEL_SHEET)
                 )
                 .offerTo(consumer, new Identifier(Efdf.MODID,"condensed_milk_can_from_steel_sheet"));
+
+        //3小麦 + 3糖 -> 1压缩军粮
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.COMPRESSED_BISCUITS_BIG_ITEM,1)
+                .input(Items.WHEAT,3)
+                .input(Items.SUGAR,3)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.WHEAT),
+                        FabricRecipeProvider.conditionsFromItem(Items.WHEAT)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"compressed_biscuits_big_from_wheat_sugar"));
+
+        //1钢瓶 + 2水瓶 -> 1保温壶
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.THERMOS_ITEM,1)
+                .input(commonItems.STEEL_BOTTLE,1)
+                .input(Ingredient.ofStacks(waterBottle),2)
+                .criterion(
+                        FabricRecipeProvider.hasItem(commonItems.STEEL_BOTTLE),
+                        FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_BOTTLE)
+                ).offerTo(consumer,new Identifier(Efdf.MODID,"thermos_from_steel_bottle"));
     }
 }

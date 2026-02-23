@@ -29,5 +29,11 @@
     "items": [
       "efdf:bottled_water"
     ]
+  },
+  "14": {
+    "replace": false,
+    "items": [
+      "efdf:thermos"
+    ]
   }
 }

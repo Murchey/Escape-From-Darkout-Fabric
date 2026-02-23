@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -18,7 +19,7 @@ public class efdfFood {
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20*300, 1,false,false,true),1.0f)
             .alwaysEdible()
             .build();
-    public static final Item TAURINE_DRINK_ITEM = new efdfDrinkItem(new Item.Settings().food(TAURINE_DRINK).maxCount(12));
+    public static final Item TAURINE_DRINK_ITEM = new efdfDrinkItem(new Item.Settings().food(TAURINE_DRINK).maxCount(12),commonItems.STEEL_BOTTLE);
 
     //牛磺酸结晶，效果：力量1 速度1 持续200秒
     public static final FoodComponent TAURINE_CRYSTALS = (new FoodComponent.Builder()).hunger(1).saturationModifier(3.5f).alwaysEdible()
@@ -27,8 +28,8 @@ public class efdfFood {
             .build();
     public static final Item TAURINE_CRYSTALS_ITEM = new Item(new Item.Settings().food(TAURINE_CRYSTALS).maxCount(64));
 
-    //压缩饼干，无效果，回复12饥饿值,掉水
-    public static final FoodComponent COMPRESSED_BISCUITS = (new FoodComponent.Builder()).hunger(12).saturationModifier(2.75f).alwaysEdible().build();
+    //压缩饼干，无效果，回复12饥饿值,掉水-3
+    public static final FoodComponent COMPRESSED_BISCUITS = (new FoodComponent.Builder()).hunger(10).saturationModifier(2.5f).alwaysEdible().build();
     public static final Item COMPRESSED_BISCUITS_ITEM = new efdfCompressedBiscuits(new Item.Settings().food(COMPRESSED_BISCUITS).maxCount(12));
 
     //红烧牛肉罐头，力量1，持续60秒，回复16饥饿值（两块熟牛肉）
@@ -47,18 +48,18 @@ public class efdfFood {
 
     //高山清泉，口渴+12
     public static final FoodComponent BOTTLED_WATER = (new FoodComponent.Builder()).hunger(0).alwaysEdible().saturationModifier(0f).build();
-    public static final Item BOTTLED_WATER_ITEM = new efdfDrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16));
+    public static final Item BOTTLED_WATER_ITEM = new efdfDrinkItem(new Item.Settings().food(BOTTLED_WATER).maxCount(16),Items.AIR);
 
     //牛奶，口渴+3
     public static final FoodComponent BOX_MILK = (new FoodComponent.Builder()).hunger(3).saturationModifier(0.8f).alwaysEdible().build();
-    public static final Item BOX_MILK_ITEM = new efdfDrinkItem(new Item.Settings().food(BOX_MILK).maxCount(16));
+    public static final Item BOX_MILK_ITEM = new efdfDrinkItem(new Item.Settings().food(BOX_MILK).maxCount(16), Items.AIR);
 
     //红牛，口渴+5，力量2，60秒，速度2，六十秒
     public static final FoodComponent REDBULL = (new FoodComponent.Builder()).alwaysEdible().hunger(6).saturationModifier(2.0f)
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,60*20,1,false,false,true),1.0f)
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED,60*20,1,false,false,true),1.0f)
             .build();
-    public static final Item REDBULL_ITEM = new efdfDrinkItem(new Item.Settings().food(REDBULL).maxCount(16));
+    public static final Item REDBULL_ITEM = new efdfDrinkItem(new Item.Settings().food(REDBULL).maxCount(16),commonItems.STEEL_BOTTLE);
 
     //炼乳,口渴-9,饥饿+10
     public static final FoodComponent CONDENSED_MILK = (new FoodComponent.Builder()).alwaysEdible().hunger(10).saturationModifier(2.8f).build();
@@ -67,6 +68,15 @@ public class efdfFood {
     //炼乳罐头，口渴-18，饥饿+20
     public static final FoodComponent CONDENSED_MILK_CAN = (new FoodComponent.Builder()).alwaysEdible().hunger(20).saturationModifier(2.8f).build();
     public static final Item CONDENSED_MILK_CAN_ITEM = new efdfCondensedMilkCanItem(new Item.Settings().food(CONDENSED_MILK_CAN).recipeRemainder(commonItems.STEEL_BOTTLE));
+
+    //压缩军粮，口渴-6
+    public static final FoodComponent COMPRESSED_BISCUITS_BIG = (new FoodComponent.Builder()).alwaysEdible().hunger(15).saturationModifier(2.5f).build();
+    public static final Item COMPRESSED_BISCUITS_BIG_ITEM = new efdfCompressedBiscuitsBig(new Item.Settings().food(COMPRESSED_BISCUITS_BIG).maxCount(16));
+
+    //保温壶，口渴+14
+    public static final FoodComponent THERMOS = (new FoodComponent.Builder()).hunger(0).alwaysEdible().saturationModifier(0f).build();
+    public static final Item THERMOS_ITEM = new efdfDrinkItem(new Item.Settings().food(THERMOS).maxCount(16),commonItems.STEEL_BOTTLE);
+
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
@@ -79,6 +89,8 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"redbull"),REDBULL_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"condensed_milk"),CONDENSED_MILK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"condensed_milk_can"),CONDENSED_MILK_CAN_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"compressed_biscuits_big"),COMPRESSED_BISCUITS_BIG_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"thermos"),THERMOS_ITEM);
     }
 
 }

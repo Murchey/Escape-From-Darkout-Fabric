@@ -36,10 +36,12 @@ public class efdfModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(efdfFuel.HIGH_ENERGY_FUEL.asItem(), Models.GENERATED);
         itemModelGenerator.register(efdfOffensiveGrenade.OFFENSIVE_GRENADE, Models.GENERATED);
         itemModelGenerator.register(efdfFood.COMPRESSED_BISCUITS_ITEM, Models.GENERATED);
+        itemModelGenerator.register(efdfFood.COMPRESSED_BISCUITS_BIG_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.BRAISED_BEEF_CAN_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.BRAISED_BEEF_CAN_SMALL_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.SWEET_BEAN_SAUCE_ITEM,Models.GENERATED);
         itemModelGenerator.register(efdfFood.BOTTLED_WATER_ITEM,Models.GENERATED);
+        itemModelGenerator.register(efdfFood.THERMOS_ITEM, Models.GENERATED);
         itemModelGenerator.register(efdfFood.BOX_MILK_ITEM,Models.GENERATED);
         itemModelGenerator.register(efdfFood.REDBULL_ITEM,Models.GENERATED);
         itemModelGenerator.register(efdfFood.CONDENSED_MILK_ITEM,Models.GENERATED);

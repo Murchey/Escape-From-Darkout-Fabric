@@ -6,10 +6,19 @@
 
 注册类型：item
 
-效果：恢复12饥饿值
+效果：恢复10饥饿值
 ```
 工作台：2wheat + 2sugar -> 1compressed_biscuits
 ```
+### 压缩军粮 (compressed_biscuits_big)
+
+饥饿值+15
+
+```
+工作台：
+3小麦 + 3糖 -> 1压缩军粮
+```
+
 ### 牛磺酸饮料 (taurine_drink)
 
 注册类型：item(food)

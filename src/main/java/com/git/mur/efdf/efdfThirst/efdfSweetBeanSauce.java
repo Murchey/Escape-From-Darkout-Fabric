@@ -8,6 +8,7 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.UseAction;
@@ -40,7 +41,15 @@ public class efdfSweetBeanSauce extends DrinkItem {
                 ThirstManager manager = ((ThirstManagerAccess) playerEntity).getThirstManager();
                 manager.setThirstLevel(manager.getThirstLevel()-16);
             }
+            if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
+                if (stack.isEmpty()) {
+                    return new ItemStack(Items.GLASS_BOTTLE);
+                }
 
+                if (playerEntity != null) {
+                    playerEntity.getInventory().offerOrDrop(new ItemStack(Items.GLASS_BOTTLE));
+                }
+            }
             return stack;
         }
 }
