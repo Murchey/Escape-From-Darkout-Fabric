@@ -6,6 +6,7 @@
   "item.efdf.box_milk": "金丝雀牛奶",
   "item.efdf.braised_beef_can": "红烧牛肉罐头",
   "item.efdf.braised_beef_can_small": "红焖牛肉罐头",
+  "item.efdf.chocolate_power_stick": "巧克力能量棒",
   "item.efdf.compressed_biscuits": "压缩饼干",
   "item.efdf.compressed_biscuits_big": "压缩军粮",
   "item.efdf.condensed_milk": "炼乳",
@@ -23,6 +24,5 @@
   "item.efdf.thin_steel_sheet": "薄钢板",
   "item.efdf.tomato_fish_can": "番茄汁腌鱼",
   "item.efdf.tool_hammer": "工具锤",
-  "item.efdf.wheat_power_stick": "小麦能量棒",
-  "item.minecraft.air": "巧克力能量棒"
+  "item.efdf.wheat_power_stick": "小麦能量棒"
 }
