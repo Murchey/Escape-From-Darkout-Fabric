@@ -40,6 +40,10 @@ public class commonItemGroup {
                         entries.add(efdfFood.CONDENSED_MILK_ITEM);
                         entries.add(efdfFood.CONDENSED_MILK_CAN_ITEM);
                         entries.add(efdfFood.COMPRESSED_BISCUITS_BIG_ITEM);
+                        entries.add(efdfFood.POTATO_CHIPS_ITEM);
+                        entries.add(efdfFood.WHEAT_POWER_STICK_ITEM);
+                        entries.add(efdfFood.CHOCOLATE_POWER_STICK_ITEM);
+                        entries.add(efdfFood.TOMATO_FISH_CAN_ITEM);
                     }))
                     .build();
     public static void initItemGroup(){

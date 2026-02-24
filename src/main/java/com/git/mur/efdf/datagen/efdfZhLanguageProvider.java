@@ -39,5 +39,9 @@ public class efdfZhLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(efdfFood.CONDENSED_MILK_CAN_ITEM,"炼乳罐头");
         translationBuilder.add(efdfFood.COMPRESSED_BISCUITS_BIG_ITEM,"压缩军粮");
         translationBuilder.add(efdfFood.THERMOS_ITEM,"保温壶");
+        translationBuilder.add(efdfFood.TOMATO_FISH_CAN_ITEM,"番茄汁腌鱼");
+        translationBuilder.add(efdfFood.POTATO_CHIPS_ITEM,"薯片");
+        translationBuilder.add(efdfFood.WHEAT_POWER_STICK_ITEM,"小麦能量棒");
+        translationBuilder.add(efdfFood.CHOCOLATE_POWER_STICK_ITEM,"巧克力能量棒");
     }
 }

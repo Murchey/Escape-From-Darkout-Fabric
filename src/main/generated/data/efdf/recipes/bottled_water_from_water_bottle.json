@@ -3,10 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:potion"
-    },
-    {
-      "item": "minecraft:potion"
+      "item": "minecraft:water_bucket"
     }
   ],
   "result": {

@@ -77,6 +77,22 @@ public class efdfFood {
     public static final FoodComponent THERMOS = (new FoodComponent.Builder()).hunger(0).alwaysEdible().saturationModifier(0f).build();
     public static final Item THERMOS_ITEM = new efdfDrinkItem(new Item.Settings().food(THERMOS).maxCount(16),commonItems.STEEL_BOTTLE);
 
+    //小麦能量棒,口渴-3
+    public static final FoodComponent WHEAT_POWER_STICK = (new FoodComponent.Builder()).hunger(5).alwaysEdible().saturationModifier(2f).build();
+    public static final Item WHEAT_POWER_STICK_ITEM = new efdfWheatPowerStick(new Item.Settings().food(WHEAT_POWER_STICK).maxCount(32));
+
+    //巧克力能量棒，口渴-3，效果跟小麦能量棒一样，直接用一个类
+    public static final FoodComponent CHOCOLATE_POWER_STICK = (new FoodComponent.Builder()).hunger(5).saturationModifier(2.2f).alwaysEdible().build();
+    public static final Item CHOCOLATE_POWER_STICK_ITEM = new efdfWheatPowerStick(new Item.Settings().food(CHOCOLATE_POWER_STICK).maxCount(32));
+
+    //番茄汁腌鱼，口渴-2
+    public static final FoodComponent TOMATO_FISH_CAN = (new FoodComponent.Builder()).hunger(8).saturationModifier(10f).alwaysEdible().build();
+    public static final Item TOMATO_FISH_CAN_ITEM = new efdfFishCan(new Item.Settings().food(TOMATO_FISH_CAN).maxCount(16));
+
+    //薯片，口渴-3，效果跟小麦能量棒一样，直接用一个类
+    public static final FoodComponent POTATO_CHIPS = (new FoodComponent.Builder()).hunger(2).saturationModifier(0.8F).alwaysEdible().build();
+    public static final Item POTATO_CHIPS_ITEM = new efdfWheatPowerStick(new Item.Settings().food(POTATO_CHIPS).maxCount(16));
+
     public static void foodInit(){
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_drink"),TAURINE_DRINK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"taurine_crystals"),TAURINE_CRYSTALS_ITEM);
@@ -91,6 +107,9 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"condensed_milk_can"),CONDENSED_MILK_CAN_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"compressed_biscuits_big"),COMPRESSED_BISCUITS_BIG_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"thermos"),THERMOS_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"wheat_power_stick"),WHEAT_POWER_STICK_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"tomato_fish_can"),TOMATO_FISH_CAN_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"potato_chips"),POTATO_CHIPS_ITEM);
     }
 
 }

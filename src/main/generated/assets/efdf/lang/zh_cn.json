@@ -12,6 +12,7 @@
   "item.efdf.condensed_milk_can": "炼乳罐头",
   "item.efdf.high_toughness_steel": "高韧钢",
   "item.efdf.offensive_grenade": "进攻雷",
+  "item.efdf.potato_chips": "薯片",
   "item.efdf.redbull": "红阳运动饮料",
   "item.efdf.steel_bottle": "钢制瓶",
   "item.efdf.steel_ingot": "钢锭",
@@ -20,5 +21,8 @@
   "item.efdf.taurine_drink": "牛磺酸饮料",
   "item.efdf.thermos": "保温壶",
   "item.efdf.thin_steel_sheet": "薄钢板",
-  "item.efdf.tool_hammer": "工具锤"
+  "item.efdf.tomato_fish_can": "番茄汁腌鱼",
+  "item.efdf.tool_hammer": "工具锤",
+  "item.efdf.wheat_power_stick": "小麦能量棒",
+  "item.minecraft.air": "巧克力能量棒"
 }

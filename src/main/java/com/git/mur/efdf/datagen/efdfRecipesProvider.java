@@ -303,7 +303,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                 )
                 .offerTo(consumer, new Identifier(Efdf.MODID,"condensed_milk_can_from_steel_sheet"));
 
-        //3小麦 + 3糖 -> 1压缩军粮
+        // 3小麦 + 3糖 -> 1压缩军粮
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.COMPRESSED_BISCUITS_BIG_ITEM,1)
                 .input(Items.WHEAT,3)
                 .input(Items.SUGAR,3)
@@ -312,7 +312,7 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(Items.WHEAT)
                 ).offerTo(consumer, new Identifier(Efdf.MODID,"compressed_biscuits_big_from_wheat_sugar"));
 
-        //1钢瓶 + 2水瓶 -> 1保温壶
+        // 1钢瓶 + 2水瓶 -> 1保温壶
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.THERMOS_ITEM,1)
                 .input(commonItems.STEEL_BOTTLE,1)
                 .input(Ingredient.ofStacks(waterBottle),2)
@@ -320,5 +320,47 @@ public class efdfRecipesProvider extends FabricRecipeProvider {
                         FabricRecipeProvider.hasItem(commonItems.STEEL_BOTTLE),
                         FabricRecipeProvider.conditionsFromItem(commonItems.STEEL_BOTTLE)
                 ).offerTo(consumer,new Identifier(Efdf.MODID,"thermos_from_steel_bottle"));
+
+        // 2熟马铃薯 -> 1薯片
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.POTATO_CHIPS_ITEM,1)
+                .input(Items.BAKED_POTATO,2)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.POTATO),
+                        FabricRecipeProvider.conditionsFromItem(Items.POTATO)
+                ).offerTo(consumer,new Identifier(Efdf.MODID,"potato_chip_with_two_potato"));
+
+        // 2熟鲑鱼 + 1甜菜根 -> 1番茄鱼罐头
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.TOMATO_FISH_CAN_ITEM,1)
+                .input(Items.BEETROOT,1)
+                .input(Items.COOKED_SALMON,2)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.BEETROOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.BEETROOT)
+                ).offerTo(consumer,new Identifier(Efdf.MODID,"tomato_fish_can_with_salmon"));
+
+        // 2熟鳕鱼 + 1甜菜根 -> 1番茄鱼罐头
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.TOMATO_FISH_CAN_ITEM,1)
+                .input(Items.COOKED_COD,2)
+                .input(Items.BEETROOT,1)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.BEETROOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.BEETROOT)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"tomato_fish_can_with_cod"));
+
+        // 3小麦 -> 1小麦能量棒
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.WHEAT_POWER_STICK_ITEM,1)
+                .input(Items.WHEAT,3)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.WHEAT_SEEDS),
+                        FabricRecipeProvider.conditionsFromItem(Items.WHEAT_SEEDS)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"power_stick_with_wheat"));
+
+        // 3可可豆 -> 1巧克力能量棒
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,efdfFood.CHOCOLATE_POWER_STICK_ITEM,1)
+                .input(Items.COCOA_BEANS,3)
+                .criterion(
+                        FabricRecipeProvider.hasItem(Items.COCOA_BEANS),
+                        FabricRecipeProvider.conditionsFromItem(Items.COCOA_BEANS)
+                ).offerTo(consumer, new Identifier(Efdf.MODID,"chocolate_stick_with_cocoa_bean"));
     }
 }

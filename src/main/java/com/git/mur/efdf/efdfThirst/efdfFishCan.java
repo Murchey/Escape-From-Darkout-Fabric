@@ -1,0 +1,54 @@
+package com.git.mur.efdf.efdfThirst;
+
+import com.git.mur.efdf.efdfItems.commonItems;
+import net.dehydration.access.ThirstManagerAccess;
+import net.dehydration.api.DrinkEvent;
+import net.dehydration.api.DrinkItem;
+import net.dehydration.thirst.ThirstManager;
+import net.minecraft.advancement.criterion.Criteria;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.UseAction;
+import net.minecraft.world.World;
+
+public class efdfFishCan extends DrinkItem {
+    public efdfFishCan(Settings settings) {
+        super(settings);
+    }
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.EAT;
+    }
+    @Override
+    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+        PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
+        if (playerEntity instanceof ServerPlayerEntity) {
+            Criteria.CONSUME_ITEM.trigger((ServerPlayerEntity)playerEntity, stack);
+        }
+        if (playerEntity != null) {
+            playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
+            if (!playerEntity.getAbilities().creativeMode && this.isFood()) {
+                ((DrinkEvent) DrinkEvent.EVENT.invoker()).onDrink(stack, playerEntity);
+                user.eatFood(world, stack);
+            }
+        }
+        if (playerEntity != null) {
+            ThirstManager manager = ((ThirstManagerAccess) playerEntity).getThirstManager();
+            manager.setThirstLevel(manager.getThirstLevel()-2);
+        }
+        if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
+            if (stack.isEmpty()) {
+                return new ItemStack(commonItems.STEEL_BOTTLE);
+            }
+
+            if (playerEntity != null) {
+                playerEntity.getInventory().offerOrDrop(new ItemStack(commonItems.STEEL_BOTTLE));
+            }
+        }
+        return stack;
+    }
+}
