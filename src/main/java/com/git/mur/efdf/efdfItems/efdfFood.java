@@ -110,6 +110,7 @@ public class efdfFood {
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"wheat_power_stick"),WHEAT_POWER_STICK_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"tomato_fish_can"),TOMATO_FISH_CAN_ITEM);
         Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"potato_chips"),POTATO_CHIPS_ITEM);
+        Registry.register(Registries.ITEM, Identifier.of(Efdf.MODID,"chocolate_power_stick"),CHOCOLATE_POWER_STICK_ITEM);
     }
 
 }
